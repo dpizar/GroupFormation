@@ -44,74 +44,74 @@ public class DispatcherFilter implements Filter {
 	 */
 	private String getCommandFromPathInfoAndMaybeSetSomeAttributes(
 			HttpServletRequest request) {
-		String path = request.getPathInfo();
-		System.out.println(path);
-		if (path == null)
-			return null;
+			String path = request.getPathInfo();
+			System.out.println(path);
+			if (path == null)
+				return null;
 
-		String command = null;
-		if ("/login".equals(path)) {
-			command = "LogIOPC";
-		}		
-		else if("/BrowseGroup".equals(path)){
-			command= "BrowseGroup";
-		}		
-		else if("/BrowsePeople".equals(path)){
-			command= "BrowsePeople";
-		}
-		else if("/AdminAddUsers".equals(path)){
-			command= "AdminAddUsers";
-		}
-		else if("/logout".equals(path)){
-			command= "LogOut";
-		}
-		else if("/CreateGroup".equals(path)){
-			command= "CreateGroup";
-		}
-		else if("/ViewGroup".equals(path)){
-			command= "ViewGroup";
-		}
-		else if("/EditGroup".equals(path)){
-			command= "EditGroup";
-		}
-		else if("/DeleteGroup".equals(path)){
-			command= "DeleteGroup";
-		}
-		else if("/ViewPerson".equals(path)){
-			command= "ViewPerson";
-		}
-		else if("/RemoveMember".equals(path)){
-			command= "RemoveMember";
-		}
-		else if("/RemovePerson".equals(path)){
-			command= "RemovePerson";
-		}	
-		else if("/BrowseInvites".equals(path)){
-			command= "BrowseInvite";
-		}
-		else if("/ViewInvite".equals(path)){
-			command= "InvitePerson";
-		}
-		/*
-		else if("/index.jsp".equals(path)){
-			command= "Home";
-		}
-		*/
-		/*
-		else {
-			Pattern pattern = Pattern.compile("^/(view|inc)/(\\d+)$");
-			Matcher matcher = pattern.matcher(path);
-			if (matcher.find()) {
-				String id = null;
-				command = "view".equals(matcher.group(1)) ? "ViewPerson"
-						: "IncreaseAge";
-				id = matcher.group(2);
-				request.setAttribute("id", id);
+			String command = null;
+			if ("/login".equals(path)) {
+				command = "LogIOPC";
 			}
-		}
-		*/
-		System.out.println("command = " + command);
-		return command;
+			else if("/BrowseGroup".equals(path)){
+				command= "BrowseGroup";
+			}
+			else if("/BrowsePeople".equals(path)){
+				command= "BrowsePeople";
+			}
+			else if("/AdminAddUsers".equals(path)){
+				command= "AdminAddUsers";
+			}
+			else if("/logout".equals(path)){
+				command= "LogOut";
+			}
+			else if("/CreateGroup".equals(path)){
+				command= "CreateGroup";
+			}
+			else if("/ViewGroup".equals(path)){
+				command= "ViewGroup";
+			}
+			else if("/EditGroup".equals(path)){
+				command= "EditGroup";
+			}
+			else if("/DeleteGroup".equals(path)){
+				command= "DeleteGroup";
+			}
+			else if("/ViewPerson".equals(path)){
+				command= "ViewPerson";
+			}
+			else if("/RemoveMember".equals(path)){
+				command= "RemoveMember";
+			}
+			else if("/RemovePerson".equals(path)){
+				command= "RemovePerson";
+			}
+			else if("/BrowseInvites".equals(path)){
+				command= "BrowseInvite";
+			}
+			else if("/ViewInvite".equals(path)){
+				command= "InvitePerson";
+			}
+			/*
+			else if("/index.jsp".equals(path)){
+				command= "Home";
+			}
+			*/
+			/*
+			else {
+				Pattern pattern = Pattern.compile("^/(view|inc)/(\\d+)$");
+				Matcher matcher = pattern.matcher(path);
+				if (matcher.find()) {
+					String id = null;
+					command = "view".equals(matcher.group(1)) ? "ViewPerson"
+							: "IncreaseAge";
+					id = matcher.group(2);
+					request.setAttribute("id", id);
+				}
+			}
+			*/
+			System.out.println("command = " + command);
+			return command;
 	}
 	
 	
