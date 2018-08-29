@@ -1,10 +1,11 @@
 package org.soenea.assignments.services.invite.TDG;
 
+import org.soenea.assignments.services.DbRegistry;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.dsrg.soenea.service.threadLocal.DbRegistry;
 
 
 

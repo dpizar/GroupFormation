@@ -1,9 +1,10 @@
 package org.soenea.assignments.services.group.TDG;
 
+import org.soenea.assignments.services.DbRegistry;
+
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import org.dsrg.soenea.service.threadLocal.DbRegistry;
 
 public class GroupTDG {
 	public static final String SELECT_ALL = "SELECT * FROM groupp;";
